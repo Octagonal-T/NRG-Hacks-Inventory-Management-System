@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-jaldi: Jaldi;
+
+  /* font sizes */
+  --font-size-mini: 0.94rem;
+  --font-size-16xl: 2.19rem;
+  --font-size-3xs: 0.63rem;
+  --font-size-xl: 1.25rem;
+
+  /* Colors */
+  --color-aliceblue: #d8f1ff;
+  --color-black: #000;
+  --color-whitesmoke-100: #f4f4f4;
+  --color-gainsboro: #dbdbdb;
+  --color-white: #fff;
+  --color-lightsteelblue: #bedcff;
+
+  /* Gaps */
+  --gap-3xs: 0.63rem;
+
+  /* Paddings */
+  --padding-2xs: 0.69rem;
+  --padding-smi: 0.81rem;
+
+  /* Border radiuses */
+  --br-lg: 18px;
+  --br-3xs: 10px;
+  --br-11xs: 2px;
+  --br-8xs: 5px;
+}
