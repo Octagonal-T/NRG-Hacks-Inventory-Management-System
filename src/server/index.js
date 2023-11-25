@@ -28,14 +28,19 @@ app.post('/login', (req, res) => {
 
 app.get('/departments', (req, res) => {
   let departmentInfo = JSON.parse(fs.readFileSync("./db.json"));
-  res.send(JSON.stringify(departmentInfo.deparments));
+  console.log(JSON.stringify(departmentInfo.departments))
+  console.log(departmentInfo.departments)
+
+  res.send(JSON.stringify(departmentInfo.departments));
   res.status(200);
 })
 
 app.post('/student/signout', (req, res) => {
   let response = {status: ""};
   let database = JSON.parse(fs.readFileSync("./db.json"));
-  let item = database.departments[req.body.dept.toLowerCase()].inventory.find((e) => {e.item == req.body.item}).obj.find((e) => e.trackingNum == req.body.trackingNum);
+  console.log(req.body.item);
+  console.log(database.departments[req.body.dept.toLowerCase()].inventory)
+  let item = database.departments[req.body.dept.toLowerCase()].inventory.find((e) => {e.item === req.body.item; console.log(e.item); console.log(req.body.item)}).obj.find((e) => e.trackingNum == req.body.trackingNum);
   if(item === undefined){
     response.status = "REJECTED";
   }else if(item.status != "SIGNED OUT"){
@@ -51,6 +56,7 @@ app.post('/student/signout', (req, res) => {
   database.departments[req.body.dept.toLowerCase()].inventory.find((e) => {e.item == req.body.item}).obj.find((e) => e.trackingNum == req.body.trackingNum) = item;
   res.send(JSON.stringify(response));
   res.status(200);
+  console.log(req.body);
   fs.writeFileSync("./db.json", JSON.stringify(database))
 })
 app.post('/student/return', (req, res) => {
