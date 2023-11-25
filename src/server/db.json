@@ -1,0 +1,48 @@
+{
+  "departments": {
+    "music": {
+      "inventory": [
+        {
+          "item": "trombone",
+          "quantity": 2,
+          "obj": [
+            {
+              "status": "SIGNED OUT", "student": 1234, "dueDate": "UNIX TIMESTAMP HERE", "dateOut": "UNIX TIMESTAMP HERE", "trackingNum": 9876
+            },
+            {
+              "status": "IN STOCK", "student": 0, "dueDate": "0", "dateOut": 0, "trackingNum": 5432
+            }
+          ]
+        },
+        {
+          "item": "trumpet",
+          "quantity": 2,
+          "obj": [
+            {
+              "status": "SIGNED OUT", "student": 1234, "dueDate": "UNIX TIMESTAMP HERE", "dateOut": "UNIX TIMESTAMP HERE", "trackingNum": 9876
+            },
+            {
+              "status": "IN STOCK", "student": 0, "dueDate": "0", "dateOut": 0, "trackingNum": 5432
+            }
+          ]
+        }
+      ]
+    }
+  },
+
+  "students": [
+    {
+      "id": 348688615,
+      "password": "abc123",
+      "name": "Max Li",
+      "history": [
+        {"trackingNum": 9876, "dueDate": "UNIX TIMESTAMP HERE", "dateOut": "UNIX TIMESTAMP HERE"}
+      ],
+      "notes": ""
+    }
+  ],
+
+  "teachers": [
+
+  ]
+}
